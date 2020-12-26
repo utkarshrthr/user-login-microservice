@@ -18,7 +18,6 @@ public class UserConfig {
     @Primary
     @Bean(name = "dataSource")
     public DataSource dataSource(){
-        System.out.println(databaseConfig.getDriver());
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.driverClassName(databaseConfig.getDriver());
         dataSourceBuilder.url(databaseConfig.getUrl());
